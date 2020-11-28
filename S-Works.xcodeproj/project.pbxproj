@@ -16,6 +16,13 @@
 		B0EA379A2572555E00C5438B /* S_WorksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA37992572555E00C5438B /* S_WorksTests.swift */; };
 		B0EA37A52572555E00C5438B /* S_WorksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA37A42572555E00C5438B /* S_WorksUITests.swift */; };
 		B0EA37C125725F5900C5438B /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA37C025725F5900C5438B /* ResponseModel.swift */; };
+		B0EA37C92572644C00C5438B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA37C82572644C00C5438B /* NetworkManager.swift */; };
+		B0EA37CE257264B800C5438B /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA37CD257264B800C5438B /* NetworkError.swift */; };
+		B0EA37D4257267E300C5438B /* URLSessions+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA37D3257267E300C5438B /* URLSessions+.swift */; };
+		B0EA37DC25728E0800C5438B /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA37DB25728E0800C5438B /* Endpoints.swift */; };
+		B0EA37E72572B8F000C5438B /* ClientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA37E62572B8F000C5438B /* ClientsViewModel.swift */; };
+		B0EA37EE2572BDDB00C5438B /* ClientDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA37EC2572BDDB00C5438B /* ClientDetailTableViewCell.swift */; };
+		B0EA37EF2572BDDB00C5438B /* ClientDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0EA37ED2572BDDB00C5438B /* ClientDetailTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,13 @@
 		B0EA37A42572555E00C5438B /* S_WorksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S_WorksUITests.swift; sourceTree = "<group>"; };
 		B0EA37A62572555E00C5438B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0EA37C025725F5900C5438B /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		B0EA37C82572644C00C5438B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B0EA37CD257264B800C5438B /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		B0EA37D3257267E300C5438B /* URLSessions+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessions+.swift"; sourceTree = "<group>"; };
+		B0EA37DB25728E0800C5438B /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		B0EA37E62572B8F000C5438B /* ClientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsViewModel.swift; sourceTree = "<group>"; };
+		B0EA37EC2572BDDB00C5438B /* ClientDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailTableViewCell.swift; sourceTree = "<group>"; };
+		B0EA37ED2572BDDB00C5438B /* ClientDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClientDetailTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,13 +115,14 @@
 		B0EA37812572555D00C5438B /* S-Works */ = {
 			isa = PBXGroup;
 			children = (
+				B0EA37EB2572BD8400C5438B /* TableViewCell */,
+				B0EA37D2257267BB00C5438B /* Extensions */,
 				B0EA37BC25725D2C00C5438B /* NetworkHelpers */,
 				B0EA37BB25725D2200C5438B /* ViewModels */,
 				B0EA37BA25725D1B00C5438B /* Controllers */,
 				B0EA37B825725D0A00C5438B /* Models */,
 				B0EA37822572555D00C5438B /* AppDelegate.swift */,
 				B0EA37842572555D00C5438B /* SceneDelegate.swift */,
-				B0EA37862572555D00C5438B /* ViewController.swift */,
 				B0EA37882572555D00C5438B /* Main.storyboard */,
 				B0EA378B2572555E00C5438B /* Assets.xcassets */,
 				B0EA378D2572555E00C5438B /* LaunchScreen.storyboard */,
@@ -145,6 +160,7 @@
 		B0EA37BA25725D1B00C5438B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B0EA37862572555D00C5438B /* ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -152,6 +168,7 @@
 		B0EA37BB25725D2200C5438B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B0EA37E62572B8F000C5438B /* ClientsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -159,8 +176,28 @@
 		B0EA37BC25725D2C00C5438B /* NetworkHelpers */ = {
 			isa = PBXGroup;
 			children = (
+				B0EA37C82572644C00C5438B /* NetworkManager.swift */,
+				B0EA37CD257264B800C5438B /* NetworkError.swift */,
+				B0EA37DB25728E0800C5438B /* Endpoints.swift */,
 			);
 			path = NetworkHelpers;
+			sourceTree = "<group>";
+		};
+		B0EA37D2257267BB00C5438B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B0EA37D3257267E300C5438B /* URLSessions+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B0EA37EB2572BD8400C5438B /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				B0EA37EC2572BDDB00C5438B /* ClientDetailTableViewCell.swift */,
+				B0EA37ED2572BDDB00C5438B /* ClientDetailTableViewCell.xib */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +306,7 @@
 				B0EA378F2572555E00C5438B /* LaunchScreen.storyboard in Resources */,
 				B0EA378C2572555E00C5438B /* Assets.xcassets in Resources */,
 				B0EA378A2572555D00C5438B /* Main.storyboard in Resources */,
+				B0EA37EF2572BDDB00C5438B /* ClientDetailTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,10 +331,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0EA37D4257267E300C5438B /* URLSessions+.swift in Sources */,
 				B0EA37872572555D00C5438B /* ViewController.swift in Sources */,
 				B0EA37832572555D00C5438B /* AppDelegate.swift in Sources */,
+				B0EA37C92572644C00C5438B /* NetworkManager.swift in Sources */,
+				B0EA37CE257264B800C5438B /* NetworkError.swift in Sources */,
 				B0EA37C125725F5900C5438B /* ResponseModel.swift in Sources */,
+				B0EA37DC25728E0800C5438B /* Endpoints.swift in Sources */,
+				B0EA37EE2572BDDB00C5438B /* ClientDetailTableViewCell.swift in Sources */,
 				B0EA37852572555D00C5438B /* SceneDelegate.swift in Sources */,
+				B0EA37E72572B8F000C5438B /* ClientsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
