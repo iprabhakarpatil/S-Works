@@ -12,6 +12,17 @@ class ClientDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     
+    static var reuseIdentifier: String {
+        return String(describing: self)
+    }
+    
+    static var nib: UINib {
+        return UINib(nibName: String(describing: self), bundle: nil)
+    }
+    
+    override func prepareForReuse() {
+  
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
