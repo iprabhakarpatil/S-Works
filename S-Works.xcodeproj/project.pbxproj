@@ -15,6 +15,7 @@
 		B0EA378F2572555E00C5438B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0EA378D2572555E00C5438B /* LaunchScreen.storyboard */; };
 		B0EA379A2572555E00C5438B /* S_WorksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA37992572555E00C5438B /* S_WorksTests.swift */; };
 		B0EA37A52572555E00C5438B /* S_WorksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA37A42572555E00C5438B /* S_WorksUITests.swift */; };
+		B0EA37C125725F5900C5438B /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA37C025725F5900C5438B /* ResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		B0EA37A02572555E00C5438B /* S-WorksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "S-WorksUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0EA37A42572555E00C5438B /* S_WorksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S_WorksUITests.swift; sourceTree = "<group>"; };
 		B0EA37A62572555E00C5438B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0EA37C025725F5900C5438B /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,10 @@
 		B0EA37812572555D00C5438B /* S-Works */ = {
 			isa = PBXGroup;
 			children = (
+				B0EA37BC25725D2C00C5438B /* NetworkHelpers */,
+				B0EA37BB25725D2200C5438B /* ViewModels */,
+				B0EA37BA25725D1B00C5438B /* Controllers */,
+				B0EA37B825725D0A00C5438B /* Models */,
 				B0EA37822572555D00C5438B /* AppDelegate.swift */,
 				B0EA37842572555D00C5438B /* SceneDelegate.swift */,
 				B0EA37862572555D00C5438B /* ViewController.swift */,
@@ -126,6 +132,35 @@
 				B0EA37A62572555E00C5438B /* Info.plist */,
 			);
 			path = "S-WorksUITests";
+			sourceTree = "<group>";
+		};
+		B0EA37B825725D0A00C5438B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B0EA37C025725F5900C5438B /* ResponseModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B0EA37BA25725D1B00C5438B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B0EA37BB25725D2200C5438B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B0EA37BC25725D2C00C5438B /* NetworkHelpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkHelpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +295,7 @@
 			files = (
 				B0EA37872572555D00C5438B /* ViewController.swift in Sources */,
 				B0EA37832572555D00C5438B /* AppDelegate.swift in Sources */,
+				B0EA37C125725F5900C5438B /* ResponseModel.swift in Sources */,
 				B0EA37852572555D00C5438B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,7 +481,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.prabhakar.S-Works";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -463,7 +499,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.prabhakar.S-Works";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
