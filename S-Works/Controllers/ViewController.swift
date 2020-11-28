@@ -49,6 +49,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         if let order = clientsViewModel.orders?[indexPath.row] {
+            cell.order = order
             cell.name.text = order.name
             cell.addressLabel.text = order.address
         }

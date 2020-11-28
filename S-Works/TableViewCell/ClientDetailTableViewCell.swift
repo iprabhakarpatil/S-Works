@@ -12,6 +12,8 @@ class ClientDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     
+    var order: OrderModel?
+    
     static var reuseIdentifier: String {
         return String(describing: self)
     }
@@ -21,18 +23,15 @@ class ClientDetailTableViewCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
-  
+        
     }
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     @IBAction func navigationAction(_ sender: Any) {
@@ -41,8 +40,14 @@ class ClientDetailTableViewCell: UITableViewCell {
     
     
     @IBAction func callAction(_ sender: Any) {
-        
+        if let phoneNumber = order?.phone, let phoneCallURL = URL(string: "tel://\(phoneNumber)") {
+            let application:UIApplication = UIApplication.shared
+            if (application.canOpenURL(phoneCallURL)) {
+                application.open(phoneCallURL, options: [:], completionHandler: nil)
+            }
+        } else {
+            print("Failed to make call")
+        }
     }
-    
-    
 }
+
